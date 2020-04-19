@@ -76,7 +76,7 @@ export default class CalendarApp extends Component {
     }
 
     return (
-      <div className='calendar-app'>
+      <>
         <div>
           <div className='ui pointing secondary menu'>
             <div className='menu'>
@@ -105,8 +105,9 @@ export default class CalendarApp extends Component {
             <InstructionModal modalContent={this.state.currentModalContent} />
           </div>
         </div>
+
         <Grid.Row>{renderComponent}</Grid.Row>
-      </div>
+      </>
     );
   }
 }
