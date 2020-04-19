@@ -102,7 +102,10 @@ export default class CalendarApp extends Component {
               onClick={this.handleCourtOrderSelection}>
               Court Order
             </div>
-            <InstructionModal modalContent={this.state.currentModalContent} />
+            <InstructionModal
+              className='logo'
+              modalContent={this.state.currentModalContent}
+            />
           </div>
         </div>
 

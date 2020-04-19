@@ -2,6 +2,16 @@ html {
   overflow: hidden;
 }
 
+.logo {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    display: block;
+  }
+}
+
 .react-calendar {
   width: 35em;
   color: #d10056;
@@ -23,7 +33,7 @@ html {
 .model-CPR-content {
   padding-top: 5vw;
   color: white;
-  font-size: 1.5em;
+  font-size: 19.5px;
   text-align: left;
 }
 

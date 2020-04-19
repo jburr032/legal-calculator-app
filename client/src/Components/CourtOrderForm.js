@@ -107,15 +107,15 @@ export default class CourtOrderForm extends Component {
     }
 
     return (
-      <Container>
+      <Container style={{ width: "30%" }}>
         <Segment
           style={{
-            marginLeft: "13%",
+            top: "20vw",
+            left: "25vw",
+
             position: "fixed",
-            top: "28%",
-            zIndex: 100,
-            width: "335px",
-            height: "255px",
+            width: "30vw",
+            height: "25vw",
           }}>
           <Header>Court Order Date</Header>
           <div className='modal-inputs'>

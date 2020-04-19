@@ -89,7 +89,7 @@ export default class CalendarHomePage extends Component {
   };
 
   render() {
-    const dashboardContainerStyle = { width: "1250px", marginTop: "300px" };
+    const dashboardContainerStyle = { width: "1250px", marginTop: "20vw" };
     const {
       showCprPage,
       showCourtOrderPage,
