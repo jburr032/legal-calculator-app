@@ -107,15 +107,15 @@ export default class CourtOrderForm extends Component {
     }
 
     return (
-      <Container style={{ width: "30%" }}>
+      <Container style={{ width: "250px" }}>
         <Segment
           style={{
             top: "20vw",
             left: "25vw",
             zindex: "200",
             position: "fixed",
-            width: "30vw",
-            height: "25vw",
+            width: "25vw",
+            height: "17vw",
           }}>
           <Header>Court Order Date</Header>
           <div className='modal-inputs'>
@@ -126,7 +126,7 @@ export default class CourtOrderForm extends Component {
                   type='text'
                   className='event-input'
                   onChange={this.handleEventInput}
-                  style={{ fontSize: "15px", width: "25vw" }}
+                  style={{ fontSize: "15px", width: "20vw" }}
                 />
               </div>
               <div className='field inline'>
