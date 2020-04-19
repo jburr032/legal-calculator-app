@@ -181,7 +181,7 @@ export default class CourtOrdersApp extends Component {
                   </Portal>
                 </Grid.Column>
 
-                <Grid.Column computer={6} tablet={9.5} mobile={6}>
+                <Grid.Column computer={6} tablet={16} mobile={6}>
                   {showUserInputs}
                 </Grid.Column>
               </Grid.Row>

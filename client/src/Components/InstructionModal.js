@@ -34,15 +34,14 @@ class InstructionModal extends Component {
         onClose={this.handleClose}
         basic
         size='small'>
-        <div className='model-CPR-content'>
-          <Modal.Content>{this.props.modalContent}</Modal.Content>
-        </div>
-
-        <Modal.Actions>
-          <Button color='green' onClick={this.handleClose} inverted>
-            <Icon name='checkmark' /> Got it
-          </Button>
-        </Modal.Actions>
+        <Modal.Content>
+          <div className='model-CPR-content'>{this.props.modalContent}</div>
+          <Modal.Actions>
+            <Button color='green' onClick={this.handleClose} inverted>
+              <Icon name='checkmark' /> Got it
+            </Button>
+          </Modal.Actions>
+        </Modal.Content>
       </Modal>
     );
   }

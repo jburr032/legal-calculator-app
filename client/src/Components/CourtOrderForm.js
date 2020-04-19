@@ -112,7 +112,7 @@ export default class CourtOrderForm extends Component {
           style={{
             top: "20vw",
             left: "25vw",
-
+            zindex: "200",
             position: "fixed",
             width: "30vw",
             height: "25vw",
@@ -126,7 +126,7 @@ export default class CourtOrderForm extends Component {
                   type='text'
                   className='event-input'
                   onChange={this.handleEventInput}
-                  style={{ fontSize: "15px", width: "255px" }}
+                  style={{ fontSize: "15px", width: "25vw" }}
                 />
               </div>
               <div className='field inline'>
