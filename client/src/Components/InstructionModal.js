@@ -34,7 +34,7 @@ class InstructionModal extends Component {
         onClose={this.handleClose}
         basic
         size='small'>
-        <Modal.Content>
+        <Modal.Content scrolling={true}>
           <div className='model-CPR-content'>{this.props.modalContent}</div>
           <Modal.Actions>
             <Button color='green' onClick={this.handleClose} inverted>
