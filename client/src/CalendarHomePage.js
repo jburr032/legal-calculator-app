@@ -6,6 +6,7 @@ import CprColumn from "./HomePageComponents/CprColumn";
 import CourtOrderColumn from "./HomePageComponents/CourtOrderColumn";
 import { convertDateToMs } from "./Components/CalculatorUtils";
 import { BrowserRouter as Router } from "react-router-dom";
+import "./Components/styles.css";
 
 export default class CalendarHomePage extends Component {
   state = {

@@ -1,3 +1,7 @@
+html {
+  overflow: hidden;
+}
+
 .react-calendar {
   width: 35em;
   color: #d10056;
@@ -17,7 +21,7 @@
 }
 
 .model-CPR-content {
-  padding-top: 250px;
+  padding-top: 5vw;
   color: white;
   font-size: 1.5em;
   text-align: left;
