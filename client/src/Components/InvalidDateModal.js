@@ -24,19 +24,22 @@ export default function InvalidDateModal(props) {
   return (
     <Modal open={true} basic size='small'>
       <Container style={{ marginTop: "250px" }} textAlign='centered'>
-        <div className='model-invalid-date'>
-          <Modal.Header>
-            <div
-              class='ui large header'
-              style={{ color: "white", marginBottom: "10px" }}>
-              <Icon name='calendar times outline' style={{ color: "white" }} />
-              Uh oh!...{datesArr[iterator].type} lands on a weekend or holiday.
-              Please select the date you would prefer:
-            </div>
-          </Modal.Header>
-        </div>
-
-        <Modal.Content>
+        <Modal.Content scrolling={true}>
+          {" "}
+          <div className='model-invalid-date'>
+            <Modal.Header>
+              <div
+                class='ui large header'
+                style={{ color: "white", marginBottom: "10px" }}>
+                <Icon
+                  name='calendar times outline'
+                  style={{ color: "white" }}
+                />
+                Uh oh!...{datesArr[iterator].type} lands on a weekend or
+                holiday. Please select the date you would prefer:
+              </div>
+            </Modal.Header>
+          </div>
           <Modal.Actions style={{ textAlign: "center" }}>
             <Label
               as='button'
