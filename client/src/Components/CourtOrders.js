@@ -55,6 +55,7 @@ export default class CourtOrdersApp extends Component {
     fontFamily: "Poppins",
     fontSize: "2.3em",
     textAlign: "center",
+    marginTop: "8px",
   };
 
   componentDidMount() {
@@ -186,9 +187,7 @@ export default class CourtOrdersApp extends Component {
                 </Modal>
 
                 <Grid.Column computer={6} mobile={9.5}>
-                  <div style={{ width: "100%" }}>
-                    <div className='column'>{showUserInputs}</div>
-                  </div>
+                  <div className='legal-events-display'>{showUserInputs}</div>
                 </Grid.Column>
               </Grid.Row>
             </Grid>

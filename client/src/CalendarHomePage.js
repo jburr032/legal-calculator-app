@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Container, Grid, Icon, Transition } from "semantic-ui-react";
+import {
+  Container,
+  Grid,
+  Icon,
+  Transition,
+  Responsive,
+} from "semantic-ui-react";
 import CalendarApp from "./CalendarApp";
 import CprColumn from "./HomePageComponents/CprColumn";
 import CourtOrderColumn from "./HomePageComponents/CourtOrderColumn";
@@ -167,14 +173,30 @@ export default class CalendarHomePage extends Component {
 
           {(showCprLoadingPage || showCourtOrderLoadingPage) && (
             <Container style={{ width: "650px", padding: "3.5%" }}>
-              <LoadingCalendarPage
-                calendarStyling={{
-                  marginTop: "100px",
-                  border: "solid #ffe0ed",
-                  borderHeight: "390px",
-                  borderWidth: "200px",
-                }}
-              />
+              <Responsive
+                className='loading-animation-tablet'
+                {...Responsive.onlyTablet}>
+                <LoadingCalendarPage
+                  calendarStyling={{
+                    marginTop: "100px",
+                    border: "solid #ffe0ed",
+                    borderHeight: "390px",
+                    borderWidth: "200px",
+                  }}
+                />
+              </Responsive>
+              <Responsive
+                className='loading-animation-computer'
+                {...Responsive.onlyComputer}>
+                <LoadingCalendarPage
+                  calendarStyling={{
+                    marginTop: "100px",
+                    border: "solid #ffe0ed",
+                    borderHeight: "390px",
+                    borderWidth: "200px",
+                  }}
+                />
+              </Responsive>
             </Container>
           )}
           {(showCprPage || showCourtOrderPage) && (
