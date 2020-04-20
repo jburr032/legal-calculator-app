@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Header, Segment, Container } from "semantic-ui-react";
+import { Modal, Segment, Header } from "semantic-ui-react";
 import {
   calculateLegalDates,
   utilMonths,
@@ -107,61 +107,53 @@ export default class CourtOrderForm extends Component {
     }
 
     return (
-      <Container style={{ width: "250px" }}>
-        <Segment
-          style={{
-            top: "20vw",
-            left: "25vw",
-            zindex: "200",
-            position: "fixed",
-            width: "25vw",
-            height: "17vw",
-          }}>
-          <Header>Court Order Date</Header>
-          <div className='modal-inputs'>
-            <div className='ui form'>
-              <div className='field'>
-                <label htmlFor='event-input'>Event </label>
-                <input
-                  type='text'
-                  className='event-input'
-                  onChange={this.handleEventInput}
-                  style={{ fontSize: "15px", width: "20vw" }}
-                />
-              </div>
-              <div className='field inline'>
-                <select
-                  className='days-input'
-                  onChange={this.handleDaySelect}
-                  style={{ height: "45px", width: "65px" }}>
-                  {optionNums}
-                </select>{" "}
-                <label htmlFor='days-input'>days before {clickedDate}</label>
-              </div>
-              <button
-                className='ui button primary'
-                color='blue'
-                onClick={this.handleSubmit}>
-                Calculate
-              </button>
-              <button className='ui button negative' onClick={this.handleClose}>
-                Cancel
-              </button>
-              <input
-                className='clear-days-input'
-                type='checkbox'
-                onChange={this.handleClearDaysCheck}
-                style={{
-                  marginLeft: "15px",
-                  marginTop: "13px",
-                  marginRight: "3.5px",
-                }}
-              />
-              <label htmlFor='clear-days-input'>Clear days</label>
-            </div>
+      <>
+        <Modal.Header>Court Order Date</Modal.Header>
+        <Modal.Content scrolling={true}>
+          <div>
+            <label htmlFor='event-input'>Event </label>
+            {"  "}
+            <input
+              type='text'
+              className='event-input'
+              onChange={this.handleEventInput}
+              style={{ fontSize: "15px", width: "200px" }}
+            />
           </div>
-        </Segment>
-      </Container>
+          <div style={{ marginTop: "10px" }}>
+            <select
+              className='days-input'
+              onChange={this.handleDaySelect}
+              style={{ height: "30px", width: "65px" }}>
+              {optionNums}
+            </select>{" "}
+            <label htmlFor='days-input'>days before {clickedDate}</label>
+          </div>
+          <button
+            className='ui button primary'
+            color='blue'
+            onClick={this.handleSubmit}>
+            Calculate
+          </button>
+          <button
+            style={{ marginTop: "10px" }}
+            className='ui button negative'
+            onClick={this.handleClose}>
+            Cancel
+          </button>
+          <input
+            className='clear-days-input'
+            type='checkbox'
+            onChange={this.handleClearDaysCheck}
+            style={{
+              marginLeft: "15px",
+              marginTop: "13px",
+              marginRight: "3.5px",
+            }}
+          />
+          <label htmlFor='clear-days-input'>Clear days</label>
+        </Modal.Content>
+      </>
     );
   }
 }

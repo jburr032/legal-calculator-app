@@ -169,21 +169,38 @@ export default class CourtOrdersApp extends Component {
                     onClickDay={this.handleDayClick}
                     tileDisabled={() => this.state.calendarDisabled}
                   />
-                  <Portal onClose={this.handleClose} open={modalOpen}>
-                    <CourtOrderForm
-                      date={this.state.date}
-                      onModalOpen={modalOpen}
-                      onModalClose={this.handleModalClose}
-                      calendarDisabled={this.state.calendarDisabled}
-                      handleSubmit={this.onSubmit}
-                      fetchedHolidaysInMs={this.props.fetchedHolidaysInMs}
-                    />
-                  </Portal>
                 </Grid.Column>
+                {/*<Portal onClose={this.handleClose} open={modalOpen}>
+                  <CourtOrderForm
+                    date={this.state.date}
+                    onModalOpen={modalOpen}
+                    onModalClose={this.handleModalClose}
+                    calendarDisabled={this.state.calendarDisabled}
+                    handleSubmit={this.onSubmit}
+                    fetchedHolidaysInMs={this.props.fetchedHolidaysInMs}
+                  />
+                </Portal>*/}
 
-                <Grid.Column computer={6} mobile={10}>
-                  {showUserInputs}
-                </Grid.Column>
+                <Modal
+                  size='small'
+                  onClose={this.handleClose}
+                  open={modalOpen}
+                  style={{ width: "350px", height: "220px", margin: "auto" }}>
+                  <CourtOrderForm
+                    date={this.state.date}
+                    onModalOpen={modalOpen}
+                    onModalClose={this.handleModalClose}
+                    calendarDisabled={this.state.calendarDisabled}
+                    handleSubmit={this.onSubmit}
+                    fetchedHolidaysInMs={this.props.fetchedHolidaysInMs}
+                  />
+                </Modal>
+
+                {/*<Grid.Column computer={6} mobile={9.5}>*/}
+                <div className='ui one column centered grid'>
+                  <div className='column'>{showUserInputs}</div>
+                </div>
+                {/*</Grid.Column>*/}
               </Grid.Row>
             </Grid>
           </Container>
