@@ -170,17 +170,6 @@ export default class CourtOrdersApp extends Component {
                     tileDisabled={() => this.state.calendarDisabled}
                   />
                 </Grid.Column>
-                {/*<Portal onClose={this.handleClose} open={modalOpen}>
-                  <CourtOrderForm
-                    date={this.state.date}
-                    onModalOpen={modalOpen}
-                    onModalClose={this.handleModalClose}
-                    calendarDisabled={this.state.calendarDisabled}
-                    handleSubmit={this.onSubmit}
-                    fetchedHolidaysInMs={this.props.fetchedHolidaysInMs}
-                  />
-                </Portal>*/}
-
                 <Modal
                   size='small'
                   onClose={this.handleClose}
@@ -196,11 +185,11 @@ export default class CourtOrdersApp extends Component {
                   />
                 </Modal>
 
-                {/*<Grid.Column computer={6} mobile={9.5}>*/}
-                <div className='ui one column centered grid'>
-                  <div className='column'>{showUserInputs}</div>
-                </div>
-                {/*</Grid.Column>*/}
+                <Grid.Column computer={6} mobile={9.5}>
+                  <div style={{ width: "100%" }}>
+                    <div className='column'>{showUserInputs}</div>
+                  </div>
+                </Grid.Column>
               </Grid.Row>
             </Grid>
           </Container>

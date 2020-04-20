@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Modal, Button, Icon, Label } from "semantic-ui-react";
+import { Modal, Button, Icon, Responsive } from "semantic-ui-react";
 
 class InstructionModal extends Component {
   state = { modalOpen: false };
@@ -11,16 +11,46 @@ class InstructionModal extends Component {
   instructionBtn = (
     <div className='right menu'>
       <div className='item'>
-        <Button
-          style={{
-            width: "95%",
-            backgroundColor: "#d10056",
-            color: "white",
-            fontSize: "12px",
-          }}
-          onClick={this.handleOpen}>
-          Help
-        </Button>
+        <Responsive {...Responsive.onlyMobile}>
+          <Button
+            style={{
+              width: "50%",
+              backgroundColor: "#d10056",
+              fontSize: "10px",
+            }}
+            onClick={this.handleOpen}>
+            <Icon
+              style={{ color: "white", paddingRight: "10px" }}
+              className='question'
+            />
+          </Button>
+        </Responsive>
+
+        <Responsive {...Responsive.onlyTablet}>
+          <Button
+            style={{
+              width: "95%",
+              backgroundColor: "#d10056",
+              color: "white",
+              fontSize: "12px",
+            }}
+            onClick={this.handleOpen}>
+            Help
+          </Button>
+        </Responsive>
+
+        <Responsive {...Responsive.onlyComputer}>
+          <Button
+            style={{
+              width: "95%",
+              backgroundColor: "#d10056",
+              color: "white",
+              fontSize: "12px",
+            }}
+            onClick={this.handleOpen}>
+            Help
+          </Button>
+        </Responsive>
       </div>
     </div>
   );

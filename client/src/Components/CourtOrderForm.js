@@ -111,7 +111,7 @@ export default class CourtOrderForm extends Component {
         <Modal.Header>Court Order Date</Modal.Header>
         <Modal.Content scrolling={true}>
           <div>
-            <label htmlFor='event-input'>Event </label>
+            <label htmlFor='event-input'>Event</label>
             {"  "}
             <input
               type='text'

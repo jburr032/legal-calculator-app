@@ -2,16 +2,6 @@ html {
   overflow: hidden;
 }
 
-.logo {
-  display: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .logo {
-    display: block;
-  }
-}
-
 .react-calendar {
   width: 35em;
   color: #d10056;
