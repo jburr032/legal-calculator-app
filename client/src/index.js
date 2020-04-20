@@ -2,6 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "semantic-ui-css/semantic.min.css";
 import CalendarHomePage from "./CalendarHomePage";
-import { Router } from "react-router-dom";
+import App from "./App";
 
-ReactDOM.render(<CalendarHomePage />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
