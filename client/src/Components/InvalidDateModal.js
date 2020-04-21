@@ -6,6 +6,12 @@ export default function InvalidDateModal(props) {
   const [iterator, increaseIterator] = useState(0);
   const datesArr = props.invalidDatesArr;
 
+  const labelStyle = {
+    fontSize: "10.5px",
+    margin: "auto",
+    paddingLeft: "2.5%",
+    color: "#ad0202",
+  };
   const onModalSelection = (event) => {
     const id = event.target.id;
     const _ = event.target.value.split(",");
@@ -28,8 +34,15 @@ export default function InvalidDateModal(props) {
         <div className='model-invalid-date'>
           <div
             class='ui large header'
-            style={{ color: "white", marginBottom: "10px" }}>
-            <Icon name='calendar times outline' style={{ color: "white" }} />
+            style={{
+              color: "white",
+              marginBottom: "10px",
+              fontSize: "24px",
+            }}>
+            <Icon
+              name='calendar times outline'
+              style={{ color: "white", fontSize: "24px" }}
+            />
             Uh oh!...
             {datesArr[iterator].type.length == 1
               ? "that date"
@@ -52,13 +65,13 @@ export default function InvalidDateModal(props) {
               width: "250px",
               height: "40px",
               marginBottom: "10px",
-              fontSize: "14px",
+              fontSize: "13px",
             }}>
             {convertDateToString(
               datesArr[iterator].invalidDate[1].calculatedDate
             )}
             {datesArr[iterator].invalidDate[1].holiday ? (
-              <Label.Detail>HOLIDAY</Label.Detail>
+              <Label.Detail style={labelStyle}>HOLIDAY</Label.Detail>
             ) : null}
           </Label>
 
@@ -76,7 +89,7 @@ export default function InvalidDateModal(props) {
               width: "250px",
               height: "40px",
               marginBottom: "10px",
-              fontSize: "14px",
+              fontSize: "13px",
             }}>
             {convertDateToString(
               datesArr[iterator].invalidDate[0].calculatedDate
@@ -95,7 +108,7 @@ export default function InvalidDateModal(props) {
               width: "250px",
               height: "40px",
               marginBottom: "10px",
-              fontSize: "14px",
+              fontSize: "13px",
             }}>
             {convertDateToString(
               datesArr[iterator].invalidDate[2].calculatedDate
