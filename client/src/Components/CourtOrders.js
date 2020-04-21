@@ -159,7 +159,7 @@ export default class CourtOrdersApp extends Component {
           />
         ) : (
           <Container style={dashboardContainerStyle}>
-            <Grid stackable centered columns={2} divided>
+            <Grid centered columns={2} divided>
               <Header style={this.calendarHeaderStyle} size='large'>
                 Court Order
               </Header>
