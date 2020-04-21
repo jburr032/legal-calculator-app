@@ -13,7 +13,6 @@ import CourtOrderColumn from "./HomePageComponents/CourtOrderColumn";
 import { convertDateToMs } from "./Components/CalculatorUtils";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./Components/styles.css";
-import { withOrientationChange } from "react-device-detect";
 
 export default class CalendarHomePage extends Component {
   state = {
@@ -208,7 +207,6 @@ export default class CalendarHomePage extends Component {
             />
           )}
         </div>
-        {this.props.isPortrait && <h1>Portrait</h1>}
       </Router>
     );
   }
