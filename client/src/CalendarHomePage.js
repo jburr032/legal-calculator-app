@@ -42,7 +42,6 @@ export default class CalendarHomePage extends Component {
     );
     // Assigns an array of holidays in MS
     fetchedHolidaysInMs = fetchedHolidayObjs.map((holiday) => {
-      console.log(`This is the HOLIDAY type: ${typeof holiday.date}`);
       return convertDateToMs(holiday.date);
     });
 

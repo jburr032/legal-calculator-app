@@ -8,6 +8,7 @@ import {
   Portal,
 } from "semantic-ui-react";
 import Calendar from "react-calendar";
+import { TabletView, BrowserView, MobileView } from "react-device-detect";
 import InvalidDateModal from "./InvalidDateModal";
 import CourtOrderForm from "./CourtOrderForm";
 import { convertDateToString } from "./CalculatorUtils";
@@ -185,8 +186,7 @@ export default class CourtOrdersApp extends Component {
                     fetchedHolidaysInMs={this.props.fetchedHolidaysInMs}
                   />
                 </Modal>
-
-                <Grid.Column computer={6} tablet={5} mobile={9.5}>
+                <Grid.Column computer={6} tablet={6} mobile={16}>
                   <div className='column'>{showUserInputs}</div>
                 </Grid.Column>
               </Grid.Row>
