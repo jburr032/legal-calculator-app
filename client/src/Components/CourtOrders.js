@@ -164,7 +164,7 @@ export default class CourtOrdersApp extends Component {
                 Court Order
               </Header>
               <Grid.Row>
-                <Grid.Column computer={10} tablet={9}>
+                <Grid.Column computer={10} tablet={6}>
                   <Calendar
                     className='react-calendar'
                     value={this.state.date}
@@ -186,7 +186,7 @@ export default class CourtOrdersApp extends Component {
                     fetchedHolidaysInMs={this.props.fetchedHolidaysInMs}
                   />
                 </Modal>
-                <Grid.Column computer={6} tablet={7} mobile={16}>
+                <Grid.Column computer={6} tablet={10} mobile={16}>
                   <div className='column'>{showUserInputs}</div>
                 </Grid.Column>
               </Grid.Row>
