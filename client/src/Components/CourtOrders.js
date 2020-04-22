@@ -176,7 +176,7 @@ export default class CourtOrdersApp extends Component {
                   size='small'
                   onClose={this.handleClose}
                   open={modalOpen}
-                  style={{ width: "350px", height: "220px", margin: "auto" }}>
+                  style={{ width: "350px", height: "220x", margin: "auto" }}>
                   <CourtOrderForm
                     date={this.state.date}
                     onModalOpen={modalOpen}
