@@ -172,25 +172,26 @@ export default class CourtOrdersApp extends Component {
                     tileDisabled={() => this.state.calendarDisabled}
                   />
                 </Grid.Column>
-                <Modal
-                  size='small'
-                  onClose={this.handleClose}
-                  open={modalOpen}
-                  style={{ width: "350px", height: "220x", margin: "auto" }}>
-                  <CourtOrderForm
-                    date={this.state.date}
-                    onModalOpen={modalOpen}
-                    onModalClose={this.handleModalClose}
-                    calendarDisabled={this.state.calendarDisabled}
-                    handleSubmit={this.onSubmit}
-                    fetchedHolidaysInMs={this.props.fetchedHolidaysInMs}
-                  />
-                </Modal>
+
                 <Grid.Column computer={6} tablet={7} mobile={16}>
                   <div className='column'>{showUserInputs}</div>
                 </Grid.Column>
               </Grid.Row>
-            </Grid>
+            </Grid>{" "}
+            <Modal
+              size='small'
+              onClose={this.handleClose}
+              open={modalOpen}
+              style={{ width: "350px", height: "233px", margin: "auto" }}>
+              <CourtOrderForm
+                date={this.state.date}
+                onModalOpen={modalOpen}
+                onModalClose={this.handleModalClose}
+                calendarDisabled={this.state.calendarDisabled}
+                handleSubmit={this.onSubmit}
+                fetchedHolidaysInMs={this.props.fetchedHolidaysInMs}
+              />
+            </Modal>
           </Container>
         )}
       </>
@@ -222,7 +223,7 @@ function LegalEventItem(props) {
           <div className='text extra'>
             {courtOrderObj.numDays} days{" "}
             {selectedDateToCompare > calculatedDateToCompare
-              ? "before "
+              ? "from "
               : "after "}
             {courtOrderObj.selectedDate}
             <br />
